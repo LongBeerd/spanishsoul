@@ -119,13 +119,20 @@
   background-color: #e65c00;
 }
 
-@media (min-width: 500px) {
+/* Adjust for mobile screen size */
+@media (min-width: 300px) {
+
+  .carousel-overlay img {
+    margin-bottom: -5vw;
+  }
+
   .carousel-overlay p {
     font-size: 2vw; /* Adjust font size for larger screens */
   }
 
   .carousel-overlay .btn {
     font-size: 2.5vw; /* Adjust font size for larger screens */
+    padding: 1vw 2vw;
   }
 }  
 
@@ -237,7 +244,7 @@ footer {
         <img src="images/bbq-festival.png" class="d-block w-100" alt="..." height="50%">
       </div>
       <div class="carousel-item">
-        <img src="images/spanish_rice.png" class="d-block w-100" alt="..." height="50%">
+        <img src="images/images/spanish_rice.png" class="d-block w-100" alt="..." height="50%">
       </div>
     </div>
     <!-- Carousel controls if you have them -->
