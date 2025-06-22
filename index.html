@@ -10,195 +10,8 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color:#E6E1DD;
-      background-image:url("images/fire_resized.png");
-	    background-color: #1F1F1F;
-    }
-
-    /* Header Styles */
-    header {
-      padding-right: 0; /* Remove right padding that might interfere with absolute positioning */
-      background-color: #1f1f1f32;
-      border-bottom: 1px solid #ddd;
-      font-size: larger;
-      color:#E6E1DD;
-      position: relative; /* Add position relative to make the navbar items clickable */
-      z-index: 10; /* Ensure the header is above the carousel overlay */
-    }
-
-    nav {
-      margin-bottom: 15px;
-    }
-
-    #logo_image {
-      width: 10vw;
-      margin-left: 5vw;
-    }
-
-    .navbar-nav {
-      margin-right: 60px;
-    }
-
-    .navbar-nav .nav-link {
-      margin-left: 20px;
-      transition: color 0.3s;
-	    color:#E6E1DD;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #d9534f;
-    }
-	
-	  
-	  .navbar-toggler-icon {
-  	  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-	    border: none;
-	  }
-
-    .custom-toggler {
-      border: none;
-      background: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 24px;
-      padding: 0;
-    }
-
-.custom-toggler:focus,
-.custom-toggler:active {
-  outline: none;
-  box-shadow: none;
-  border: none;
-}
-
-/* Carousel Styles */
-.carousel-container {
-  position: absolute;
-  overflow: hidden; /* Clip the overlay to the carousel bounds */
-}
-
-.carousel-overlay {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for centering */
-  width: 80%; /* Adjust width as needed, less than 100vw */
-  max-width: 900px; /* Optional: set a maximum width for the overlay */
-  padding: 1rem;
-  text-align: center; /* Keep text centered */
-  color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  z-index: 5; /* Ensure the overlay is above the carousel images */
-}
-
-.carousel-overlay img {
-  width: 40vw; /* Adjust image width relative to the overlay */
-  height: auto;
-  margin-bottom: 0.5vw;
-}
-
-.carousel-overlay p {
-  font-size: 4vw; /* Use viewport width for responsive font size */
-  margin-bottom: 1vw;
-}
-
-.carousel-overlay .btn {
-  font-size: 3vw; /* Use viewport width for responsive font size */
-  padding: 0.6rem 1.5rem;
-  background-color: #ff6600; /* Optional: BBQ-style orange button */
-  border: none;
-}
-
-.carousel-overlay .btn:hover {
-  background-color: #e65c00;
-}
-
-/* Adjust for mobile screen size */
-@media (min-width: 200px) {
-
-  .carousel-overlay img {
-    margin-bottom: -3vw;
-  }
-
-  .carousel-overlay p {
-    font-size: 2vw; /* Adjust font size for larger screens */
-  }
-
-  .carousel-overlay .btn {
-    font-size: 2.5vw; /* Adjust font size for larger screens */
-    padding: 1vw 2vw;
-  }
-}  
-
-/* Card Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-in-out;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-	transition: all 0.8s ease-in-out;
-}
-
-.card {
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Contact Form Centering */
-.contact-card {
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-	padding-top: 50px; 
-  border-radius: 10px;
-  background:#353535;
-}
-
-.btn {
-  color: white;
-  background-color: #ff6600;
-}
-
-.btn:hover {
-  color: white;
-  background-color: #d9534f;
-}
-
-/* Footer Styles */
-footer {
-  padding: 20px 0;
-  background-color: #1F1F1F;
-  text-align: center;
-	color:#E6E1DD;
-}
-	
-.social-icons a {
-  color:#E6E1DD;
-  margin: 0 7px;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #d9534f;
-}
-
-#copyright {
-  color: white !important; /* Override any other styles to make the text white */
-}
-	
-	  
-  </style>
+  <!-- Custom Style for Webpage -->
+   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -207,23 +20,25 @@ footer {
 <header>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-		<a class="navbar-brand fw-bold fs-3" href="#"><img id="logo_image" src="images/SpanishSoul_Logo_Animals-01.png" alt="BBQ animal logo design"></a>
+		<a class="navbar-brand fw-bold fs-3" href="index.html"><img id="logo_image" src="images/SpanishSoul_Logo_Animals-01.png" alt="BBQ animal logo design"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav, navbar-nav ms-auto text-end colo">
+           
+          <!--  Optional About Section
+
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li> 
+
+          -->
+
           <li class="nav-item">
-            <a class="nav-link" href="google.com">About</a>
-          </li>
+            <a class="nav-link" href="events.html">Events</a>
           <li class="nav-item">
-            <a class="nav-link" href="#">Events</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="#">Menu Items</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -232,34 +47,23 @@ footer {
 </header>
 
 
-<!-- Carousel Section -->
-<div class="carousel-container position-relative">
-  <!-- Bootstrap Carousel -->
-  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/pit-smoker.jpg" class="d-block w-100" alt="..." height="50%">
-      </div>
-      <div class="carousel-item">
-        <img src="images/bbq-festival.png" class="d-block w-100" alt="..." height="50%">
-      </div>
-      <div class="carousel-item">
-        <img src="images/spanish_rice.png" class="d-block w-100" alt="..." height="50%">
-      </div>
-    </div>
-    <!-- Carousel controls if you have them -->
- 
-  </div>
+<!-- Top Section -->
+<div class="top_image-container position-relative">
+  <img src="images/optimus_prime.jpg" class="top_image" alt="BBQ background">
 
-  <!-- Overlay content on top of carousel -->
-  <div class="carousel-overlay text-center">
-    <img src="images/SpanishSoul_Logo.png" id="logo" alt="Spanish Soul Logo">
-    <br>
-	<br>
-	  <p>BBQ soul food fused with traditional Spanish cooking <br> Your tastebuds will be thanking you and begging for more!<br><br>Located in Berks County, we happily serve Reading, Wyomissing, Kutztown, and surrounding areas.<br>We primarily cater to festivals and events, but are happy to discuss catering your next event.<br>Give us a call today!</p>
-    <a href="#contact" class="btn btn-primary">Book Us</a>
+  <!-- Overlay content on top of the image -->
+  <div class="overlay text-center">
+    <img src="images/SpanishSoul_Logo.png" class="overlay_logo mb-3" alt="Spanish Soul Logo">
+    <div id="overlay_text">
+      <p>
+        A BBQ, Soul Food, Spanish cooking fusion extravaganza<br>
+        Your taste buds will be begging for more!
+      </p>
+    </div>
+    <a href="events.html" class="btn btn-primary">Our Upcoming Events</a>
   </div>
 </div>
+
 
 
 <!-- Main Content -->
@@ -268,38 +72,39 @@ footer {
   <!-- Card 1 -->
   <div class="row align-items-center mb-5 fade-in">
     <div class="col-md-6">
-      <img src="images/jacob-stone-OGUAm5YUoyc-unsplash.jpg" class="img-fluid rounded" alt="Card Image 1">
+      <img src="images/brisket_juicy.jpg" class="img-fluid rounded" alt="Card Image 1">
     </div>
     <div class="col-md-6">
-      <h2>Delicious BBQ</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum, sapien non interdum lacinia, nisl nisl hendrerit quam, at cursus urna nulla nec justo.</p>
+      <h2 class="description">A BBQ, Soul Food, Spanish Cooking Fusion</h2>
+      <p>BBQ smoked to perfection, yummy Soul food, and delicous traditional Spanish dishes. Brisket, ribs, pulled pork, Spanish rice and chicken, collard greens, we do it all!</p>
     </div>
   </div>
 
   <!-- Card 2 -->
   <div class="row align-items-center mb-5 flex-md-row-reverse fade-in">
     <div class="col-md-6">
-      <img src="images/joyce-romero-D5K1K_PVDH0-unsplash.jpg" class="img-fluid rounded" alt="Card Image 2" width="500">
+      <img src="images/rice_beans.jpg" class="img-fluid rounded" alt="Card Image 2" width="500">
     </div>
     <div class="col-md-6">
-      <h2>Where to Find Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a sem a justo dignissim iaculis. Nullam sit amet sapien nec metus sodales lacinia.</p>
+      <h2 class="description">Where to Find Us</h2>
+      <p>Located in Berks County Pennsylvania, we happily serve Reading, Wyomissing, Kutztown, and surrounding areas.
+We primarily cater to festivals and events, but are happy to discuss catering your next event.</p>
     </div>
   </div>
 
   <!-- Card 3 -->
   <div class="row align-items-center mb-5 fade-in">
     <div class="col-md-6">
-      <img src="images/israel-albornoz-VnpJ5_m-2mQ-unsplash.jpg" class="img-fluid rounded" alt="Card Image 3">
+      <img src="images/mac_cheese_rice.jpeg" class="img-fluid rounded" alt="Card Image 3">
     </div>
     <div class="col-md-6">
-      <h2>Book Us Today!</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum, tortor in suscipit tincidunt, justo lectus bibendum sem, eget laoreet augue dolor a nulla.</p>
+      <h2 class="description">Come visit us!</h2>
+      <p>Check out our <a href="events.html" class="inline_events">events page</a> to see where we'll be next. Come visit us and have your appetite satisfied!</p>
     </div>
   </div>
 
   <!-- Contact Section -->
-  <div class="contact-card my-5 p-4">
+  <div class="contact-card my-5 p-4" id="contact">
     <h3 class="text-center mb-4">Contact Us</h3>
     <form>
       <div class="mb-3">
