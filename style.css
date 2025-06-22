@@ -1,0 +1,244 @@
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:#E6E1DD;
+      background-image:url("images/fire_resized.png");
+	    background-color: #1F1F1F;
+    }
+
+    /* Header Styles */
+    header {
+      padding-right: 0; /* Remove right padding that might interfere with absolute positioning */
+      background-color: #1f1f1f32;
+      border-bottom: 1px solid #ddd;
+      font-size: larger;
+      color:#E6E1DD;
+      position: relative; /* Add position relative to make the navbar items clickable */
+      z-index: 10; /* Ensure the header is above the carousel overlay */
+    }
+
+    nav {
+      margin-bottom: 15px;
+    }
+
+    #logo_image {
+      width: 5vw;
+      margin-left: 5vw;
+    }
+
+    .navbar-nav {
+      margin-right: 60px;
+    }
+
+    .navbar-nav .nav-link {
+      margin-left: 20px;
+      transition: color 0.3s;
+	    color:#E6E1DD;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #d9534f;
+    }
+	
+	  .navbar-toggler-icon {
+  	  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+	    border: none;
+	  }
+
+
+/* Body */
+
+
+/* For Events Page */
+.calendar-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.calendar-page {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+
+/* Container holds image and overlay together */
+.top_image-container {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* Background image */
+.top_image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay on top of image */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+/* Responsive logo */
+.overlay_logo {
+  width: 100%;
+  max-width: clamp(380px, 25vw, 480px);
+  height: auto;
+}
+
+
+/* Text scaling */
+#overlay_text p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin: 1.5rem 0;
+  line-height: 1.4;
+  padding: 0 1rem;
+}
+
+
+/* Button scaling */
+.overlay .btn {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  padding: 0.6rem 1.5rem;
+  white-space: nowrap;
+  border: none;
+}
+
+.overlay .btn:hover {
+  background-color: #e65c00;
+}
+
+/* Events Hyperlink in Card 3 */
+.inline_events {
+  text-decoration: none;
+  color:#E6E1DD;
+}
+
+/* Adjust for mobile screen size */
+@media (min-width: 200px) {
+
+  .carousel-overlay img {
+    margin-bottom: -3vw;
+  }
+
+  .carousel-overlay p {
+    font-size: 2vw; /* Adjust font size for larger screens */
+  }
+
+  .carousel-overlay .btn {
+    font-size: 2.5vw; /* Adjust font size for larger screens */
+    padding: 1vw 2vw;
+  }
+}  
+
+@media (max-width: 576px) {
+  #overlay_text {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay_logo {
+    width: 100%;
+    max-width: clamp(180px, 25vw, 280px);
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay {
+    padding: 1rem 0.5rem;
+  }
+
+  #overlay_text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    width: 75%;
+    height: auto;
+    margin-top: 5px;
+  }
+  .description {
+    padding-top: 10px;
+  }
+}
+
+
+/* Card Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+	transition: all 0.8s ease-in-out;
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Form Centering */
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	padding-top: 50px; 
+  border-radius: 10px;
+  background:#353535;
+}
+
+.btn {
+  color: white;
+  background-color: #ff6600;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #d9534f;
+}
+
+/* Footer Styles */
+footer {
+  padding: 20px 0;
+  background-color: #1F1F1F;
+  text-align: center;
+	color:#E6E1DD;
+}
+	
+.social-icons a {
+  color:#E6E1DD;
+  margin: 0 7px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d9534f;
+}
+
+#copyright {
+  color: white !important; /* Override any other styles to make the text white */
+}
