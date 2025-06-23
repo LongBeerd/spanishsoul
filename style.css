@@ -188,6 +188,8 @@
     width: 75%;
     height: auto;
     margin-top: 5px;
+    display: flex;
+    justify-self: center;
   }
   .description {
     padding-top: 10px;
